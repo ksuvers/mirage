@@ -83,7 +83,7 @@ html {
 
 .bloobs {
     z-index: -2;
-    margin-top: -115px;
+    margin-top: -150px;
 }
 
 .create__chapter {
@@ -121,6 +121,7 @@ html {
     color: $grey;
     max-width: 540px;
     margin-bottom: 60px;
+    @include f300;
 }
 
 .create__btn {
@@ -181,7 +182,7 @@ img.create__btn-details-arrow {
 //end create
 //start services
 .services__inner {
-    margin-bottom: 240px;
+    margin-bottom: 220px;
 }
 
 .services__info {
@@ -207,6 +208,7 @@ img.create__btn-details-arrow {
 .services__items {
     display: flex;
     justify-content: space-between;
+    height: 350px;
 }
 
 .services__item {
@@ -279,7 +281,6 @@ img.create__btn-details-arrow {
         height: 345px;
         background-color: $pink;
         .services-btn {
-            opacity: 1;
             height: 30px;
             display: block;
             font-weight: 500;
@@ -290,25 +291,14 @@ img.create__btn-details-arrow {
             border: none;
             outline: none;
             margin-left: 40px;
+            opacity: 1;
+            transition: all ease 0.8s;
         }
         .services__item-title,
         .services__item-text {
             color: #fff;
         }
-        .branding {
-            &::before {
-                color: #fff;
-            }
-        }
     }
-}
-
-svg {
-    fill: currentColor;
-}
-
-svg:hover {
-    color: #fff;
 }
 
 .icon-play3:after {
@@ -320,9 +310,8 @@ svg:hover {
 }
 
 .services-btn {
-    opacity: 0;
-    height: 0;
     display: none;
+    height: 30px;
     span {
         font-family: 'Josefin Sans', sans-serif;
         font-weight: 500;
@@ -345,3 +334,92 @@ svg:hover {
 }
 
 //end services
+//end things,teamwork
+.things {
+    margin-bottom: 250px;
+}
+
+.things__chapter,
+.teamwork__chapter,
+.testimonial__chapter {
+    font-size: 28px;
+    line-height: 40px;
+    padding: 0;
+    &::before {
+        display: none;
+    }
+}
+
+.things__title,
+.teamwork__title,
+.testimonial__title {
+    font-size: 52px;
+    line-height: 62px;
+}
+
+.testimonial__title {
+    font-size: 55px;
+}
+
+.things__text,
+.teamwork__text,
+.testimonial__text {
+    font-size: 20px;
+    line-height: 32px;
+    @include f300;
+}
+
+.testimonial__text {
+    width: 400px;
+    margin-bottom: 23px;
+}
+
+.things__info {
+    padding-left: 80px;
+}
+
+.bloobs-r {
+    right: 0;
+    position: absolute;
+    margin-top: -40px;
+}
+
+.teamwork {
+    margin-bottom: -50px;
+}
+
+//end things,teamwork
+//start testimonial
+.testimonial__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonial {
+    margin-bottom: 200px;
+}
+
+.testimonial__name {
+    font-size: 28px;
+    line-height: 32px;
+    color: $purple;
+    @include f700;
+}
+
+.testimonial__country {
+    font-size: 16px;
+    line-height: 32px;
+    color: #ababab;
+    @include f300;
+}
+
+.testimonial__arrow {
+    margin-top: 38px;
+    margin-right: 40px;
+}
+
+.arr-l {}
+
+.arr-r {}
+
+//end testimonial
