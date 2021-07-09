@@ -220,66 +220,14 @@ img.create__btn-details-arrow {
     padding: 23px;
     position: relative;
     cursor: pointer;
-    .design {
-        &::before {
-            position: absolute;
-            content: "";
-            background-image: url(../img/vector1.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 50px;
-            height: 43px;
-            top: 56px;
-            left: 108px;
-        }
-    }
-    .development {
-        &::before {
-            position: absolute;
-            content: "";
-            background-image: url(../img/vector2.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 43px;
-            height: 47px;
-            top: 56px;
-            left: 115px;
-        }
-    }
-    .branding {
-        &::before {
-            position: absolute;
-            content: "";
-            background-image: url(../img/vector3.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 48px;
-            height: 43px;
-            top: 56px;
-            left: 108px;
-            color: $pink;
-        }
-    }
-    .illustration {
-        &::before {
-            position: absolute;
-            content: "";
-            background-image: url(../img/vector4.svg);
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-            width: 44px;
-            height: 44px;
-            top: 56px;
-            left: 108px;
-        }
+    color: $pink;
+    svg {
+        margin-top: 40px;
     }
     &:hover {
         height: 345px;
         background-color: $pink;
+        color: #fff;
         .services-btn {
             height: 30px;
             display: block;
@@ -323,7 +271,7 @@ img.create__btn-details-arrow {
     font-size: 34px;
     line-height: 72px;
     color: $purple;
-    margin-top: 120px;
+    margin-top: 40px;
 }
 
 .services__item-text {
@@ -418,8 +366,245 @@ img.create__btn-details-arrow {
     margin-right: 40px;
 }
 
-.arr-l {}
-
-.arr-r {}
-
 //end testimonial
+//start brands
+.brands {
+    margin-bottom: 130px;
+}
+
+.brands__inner {
+    display: inline-block;
+    img+img {
+        margin-left: 84px;
+    }
+}
+
+//end brands
+//start sudscribe
+.subscribe {
+    margin-bottom: 200px;
+}
+
+.subscribe__img-mail {
+    z-index: -2;
+    margin-left: 40px;
+}
+
+.subscribe__inner {
+    text-align: center;
+}
+
+.subscribe__info {}
+
+.subscribe__title {
+    font-size: 52px;
+    line-height: 72px;
+    color: $purple;
+    @include f700;
+    margin-top: -220px;
+    margin-bottom: 18px;
+}
+
+.subscribe__text {
+    color: $grey;
+    @include f300;
+    font-size: 20px;
+    line-height: 32px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.subscribe__field {
+    input {
+        width: 706px;
+        height: 82px;
+        padding: 25px 245px 23px 60px;
+        border: none;
+        outline: none;
+        background: #f7f7f7;
+        border-radius: 5px;
+        position: relative;
+        &::placeholder {
+            font-size: 20px;
+            line-height: 32px;
+            color: $grey;
+            @include f300;
+        }
+    }
+}
+
+.icon-envelope-o::before {
+    content: "\e902";
+    position: absolute;
+    font-size: 20px;
+    color: #919299;
+    left: 32.8%;
+    z-index: 2;
+    padding-top: 32px;
+}
+
+.create__btn-details-arrow {}
+
+.subscribe__btn-arrow {}
+
+.subscribe-btn {
+    display: inline;
+    position: absolute;
+    left: 56.5%;
+    margin-top: 9px;
+}
+
+.subscribe-bloobs-r {
+    margin-top: -210px;
+}
+
+//end sudscribe
+//start footer
+.footer {
+    position: relative;
+}
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    .footer__logo {
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+        color: $purple;
+        margin-bottom: 38px;
+        span {
+            color: $pink;
+        }
+    }
+}
+
+.footer__info {
+    max-width: 320px;
+    width: 100%;
+    margin-right: 200px;
+}
+
+.footer__address {
+    font-size: 19px;
+    line-height: 25px;
+    color: $grey;
+    letter-spacing: 0.02em;
+    @include f300;
+    margin-bottom: 38px;
+}
+
+.footer__social-title {
+    font-size: 20px;
+    line-height: 32px;
+    color: $grey;
+    letter-spacing: 0.02em;
+    @include f700;
+    margin-bottom: 25px;
+}
+
+.footer__social-link {
+    display: flex;
+    a {
+        background-color: #fff;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        position: relative;
+        &:before {
+            position: absolute;
+            font-family: 'icomoon';
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #A7A7A7;
+            font-size: 18px;
+        }
+        &:hover {
+            &:before {
+                color: $pink;
+            }
+        }
+    }
+    li+li {
+        margin-left: 11px;
+    }
+}
+
+.footer__list {
+    max-width: 135px;
+    width: 100%;
+}
+
+.footer__list-item {}
+
+.footer__list-title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0.02em;
+    margin-bottom: 37px;
+    color: $purple;
+}
+
+.footer__list-resources,
+.footer__list-about,
+.footer__list-helpful {
+    a {
+        font-size: 20px;
+        line-height: 32px;
+        letter-spacing: 0.02em;
+        color: $grey;
+    }
+    li+li {
+        margin-top: 25px;
+    }
+}
+
+.footer__img-gb {
+    z-index: -2;
+    position: absolute;
+    right: 0;
+    bottom: -200px;
+    width: 100%;
+    max-height: 600px;
+}
+
+.footer__copy {
+    background-color: $pink;
+    height: 54px;
+    margin-top: 50px;
+}
+
+.footer__copy-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__copy-text,
+.footer__copy-lang {
+    color: #fff;
+    font-size: 14px;
+    line-height: 24px;
+    padding: 15px 0;
+    align-items: center;
+    display: flex;
+    margin-right: 75px;
+}
+
+.footer__copy-lang {
+    span {
+        font-family: 'JosefinSans', sans-serif;
+        margin-left: 10px;
+    }
+}
+
+.icon-sphere:before {
+    content: "\e9c9";
+    font-size: 24px;
+}
+
+//end footer
