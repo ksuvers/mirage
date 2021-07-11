@@ -13,8 +13,8 @@ html {
 
 //start header
 .header {
-    margin-top: 57px;
-    margin-bottom: 129px;
+    padding-top: 57px;
+    padding-bottom: 57px;
 }
 
 .header__inner {
@@ -73,6 +73,11 @@ html {
 
 //end header
 //start create
+.create {
+    padding-top: 72px;
+    padding-bottom: 72px;
+}
+
 .create__inner {
     display: flex;
 }
@@ -81,10 +86,11 @@ html {
     position: relative;
 }
 
-.bloobs {
+
+/* .bloobs {
     z-index: -2;
     margin-top: -150px;
-}
+} */
 
 .create__chapter {
     @include f500;
@@ -135,7 +141,7 @@ html {
 
 .create__btn-text {
     align-items: center;
-    padding: 16px 23px;
+    padding: 18px 22px;
     color: #fff;
     font-size: 20px;
     line-height: 30px;
@@ -150,9 +156,13 @@ html {
     }
 }
 
-img.create__btn-details-arrow {
-    margin-top: 9px;
-    padding-left: 15px;
+.create__btn-details-arrow::before {
+    content: url('../img/arrow.svg');
+    height: 12px;
+    width: 26px;
+    position: absolute;
+    top: 18px;
+    right: 42px;
 }
 
 .create__btn-details {
@@ -167,22 +177,37 @@ img.create__btn-details-arrow {
 }
 
 .create__img {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 533px;
+    width: 532px;
+    margin-right: 35px;
 }
 
-.create__img-bg {
+.create__img-bloobs {
     position: absolute;
-    right: 0;
-    top: 0;
     z-index: -2;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 277px;
+    width: 218px;
+    left: 0px;
+}
+
+.wrapper__bg {
+    background-position: right top;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 775px;
 }
 
 //end create
 //start services
-.services__inner {
-    margin-bottom: 220px;
+.services {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .services__info {
@@ -228,6 +253,7 @@ img.create__btn-details-arrow {
         height: 345px;
         background-color: $pink;
         color: #fff;
+        transition: all .4s;
         .services-btn {
             height: 30px;
             display: block;
@@ -254,7 +280,7 @@ img.create__btn-details-arrow {
     font-size: 18px;
     position: absolute;
     right: 72px;
-    bottom: 24px;
+    bottom: 15px;
 }
 
 .services-btn {
@@ -282,9 +308,19 @@ img.create__btn-details-arrow {
 }
 
 //end services
-//end things,teamwork
+//start things,teamwork
 .things {
-    margin-bottom: 250px;
+    padding-top: 74px;
+    padding-bottom: 74px;
+}
+
+.things__inner {
+    .things__img {
+        width: 570px;
+        height: 472px;
+        background-size: contain;
+        margin-right: 0;
+    }
 }
 
 .things__chapter,
@@ -299,59 +335,71 @@ img.create__btn-details-arrow {
 }
 
 .things__title,
-.teamwork__title,
-.testimonial__title {
+.teamwork__title {
     font-size: 52px;
     line-height: 62px;
 }
 
-.testimonial__title {
-    font-size: 55px;
-}
-
 .things__text,
-.teamwork__text,
-.testimonial__text {
+.teamwork__text {
     font-size: 20px;
     line-height: 32px;
     @include f300;
-}
-
-.testimonial__text {
-    width: 400px;
-    margin-bottom: 23px;
 }
 
 .things__info {
     padding-left: 80px;
 }
 
-.bloobs-r {
+
+/* .bloobs-r {
     right: 0;
     position: absolute;
     margin-top: -40px;
-}
+} */
 
 .teamwork {
-    margin-bottom: -50px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.teamwork__inner {
+    display: flex;
+    justify-content: space-between;
+    .teamwork__img {
+        width: 587px;
+        height: 587px;
+    }
 }
 
 //end things,teamwork
 //start testimonial
-.testimonial__inner {
-    display: flex;
-    justify-content: space-between;
-}
-
 .testimonial {
-    margin-bottom: 200px;
+    padding-top: 74px;
+    padding-bottom: 74px;
 }
 
 .testimonial__name {
     font-size: 28px;
-    line-height: 32px;
     color: $purple;
     @include f700;
+}
+
+.testimonial__text {
+    line-height: 32px;
+    font-size: 20px;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.testimonial__chapter {
+    margin-bottom: 20px;
+}
+
+.testimonial__title {
+    font-size: 52px;
+    line-height: 62px;
+    margin-bottom: 20px;
 }
 
 .testimonial__country {
@@ -359,6 +407,20 @@ img.create__btn-details-arrow {
     line-height: 32px;
     color: #ababab;
     @include f300;
+    &::after {
+        content: url('../img/left.png');
+        height: 2px;
+        width: 12px;
+        position: absolute;
+        right: 90px;
+    }
+    &::before {
+        content: url('../img/right.png');
+        height: 2px;
+        width: 18px;
+        position: absolute;
+        right: 60px;
+    }
 }
 
 .testimonial__arrow {
@@ -366,42 +428,71 @@ img.create__btn-details-arrow {
     margin-right: 40px;
 }
 
+.testimonial__inner {
+    .testimonial__img {
+        width: 416px;
+        height: 419px;
+    }
+}
+
 //end testimonial
 //start brands
 .brands {
-    margin-bottom: 130px;
+    padding-top: 90px;
+    padding-bottom: 85px;
 }
 
 .brands__inner {
-    display: inline-block;
-    img+img {
-        margin-left: 84px;
+    display: flex;
+    justify-content: space-between;
+    .brands__inner-img {
+        max-width: 195px;
+        width: 100%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 56px;
     }
 }
 
 //end brands
 //start sudscribe
 .subscribe {
-    margin-bottom: 200px;
+    padding-top: 85px;
+    padding-bottom: 85px;
 }
 
 .subscribe__img-mail {
-    z-index: -2;
+    position: absolute;
     margin-left: 40px;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 250px;
+    width: 250px;
+}
+
+.subscribe__img-bloobs-r {
+    position: absolute;
+    z-index: -2;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 277px;
+    width: 232px;
+    right: 0px;
 }
 
 .subscribe__inner {
     text-align: center;
 }
 
-.subscribe__info {}
-
 .subscribe__title {
     font-size: 52px;
     line-height: 72px;
     color: $purple;
     @include f700;
-    margin-top: -220px;
     margin-bottom: 18px;
 }
 
@@ -444,25 +535,36 @@ img.create__btn-details-arrow {
     padding-top: 32px;
 }
 
-.create__btn-details-arrow {}
-
-.subscribe__btn-arrow {}
-
 .subscribe-btn {
     display: inline;
     position: absolute;
     left: 56.5%;
-    margin-top: 9px;
+    margin-top: 8px;
+    padding-right: 60px;
 }
 
-.subscribe-bloobs-r {
+
+/* .subscribe-bloobs-r {
     margin-top: -210px;
 }
+ */
 
 //end sudscribe
 //start footer
 .footer {
+    padding-top: 140px;
     position: relative;
+}
+
+.footer__bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 463px;
+}
+
+.footer__bg-2 {
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .footer__inner {
@@ -538,8 +640,6 @@ img.create__btn-details-arrow {
     width: 100%;
 }
 
-.footer__list-item {}
-
 .footer__list-title {
     font-weight: 500;
     font-size: 24px;
@@ -561,15 +661,6 @@ img.create__btn-details-arrow {
     li+li {
         margin-top: 25px;
     }
-}
-
-.footer__img-gb {
-    z-index: -2;
-    position: absolute;
-    right: 0;
-    bottom: -200px;
-    width: 100%;
-    max-height: 600px;
 }
 
 .footer__copy {
