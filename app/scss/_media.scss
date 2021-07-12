@@ -1,0 +1,104 @@
+@media(max-width:1150px) {
+    .create__img {
+        height: 435px;
+        width: 468px;
+        margin-right: 0;
+        position: absolute;
+        right: 30px;
+    }
+    .create__title {
+        font-size: 50px;
+        line-height: 57px;
+        max-width: 500px;
+    }
+}
+
+@media(max-width:880px) {
+    .create__img {
+        height: 258px;
+        width: 260px;
+        top: 270px;
+    }
+    .create__info {
+        display: block;
+        margin-left: 30px;
+    }
+    .create__title {
+        font-size: 47px;
+        line-height: 57px;
+    }
+    .create__text {
+        margin-bottom: 30px;
+    }
+    .create__btn {}
+}
+
+@media(max-width:770px) {
+    .create__btn {}
+    .create__title {
+        font-size: 27px;
+        line-height: 38px;
+        max-width: 330px;
+    }
+    .create__text {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 330px;
+    }
+    .create__chapter {
+        padding-left: 0px;
+        display: block;
+        &::before {
+            display: none;
+        }
+    }
+    .header__inner .header__menu-btn {
+        margin-left: 0px;
+    }
+    .header__menu-list a {
+        display: block;
+        padding: 10px 0;
+        border-bottom: 1px solid #fff;
+    }
+    .header__menu-list {
+        display: none;
+        background-color: $pink;
+        position: absolute;
+        top: 95px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        text-align: center;
+    }
+    .header__inner .header__menu-list li+li {
+        margin-left: 0px;
+    }
+    .header__inner .header__menu-list li {
+        display: block;
+    }
+    .header__inner .header__menu-list a {
+        color: #fff;
+        font-size: 17px;
+        line-height: 20px;
+    }
+}
+
+@media(max-width:610px) {
+    .create__chapter {
+        font-size: 24px;
+        line-height: 24px;
+        margin-bottom: 10px;
+        max-width: 250px;
+    }
+    .create__text {
+        font-size: 14px;
+        line-height: 17px;
+        max-width: 250px;
+    }
+    .create__title {
+        margin-bottom: 10px;
+    }
+    .create__img {
+        top: 200px;
+    }
+}
