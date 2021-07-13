@@ -1,0 +1,24 @@
+$pink:#f78cb6;
+$light_pink:#fff1f9;
+$grey:#919299;
+$purple:#56597A;
+$text:#AAAAAB;
+@mixin f300 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 300;
+}
+
+@mixin f400 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+@mixin f500 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 500;
+}
+
+@mixin f700 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
