@@ -354,11 +354,17 @@
     .create__btn-details-arrow::before {
         display: none;
     }
+    .create__btn .create__btn-text {
+        text-align: center;
+    }
 }
 
 @media(max-width:330px) {
     .subscribe__title {
         font-size: 26px;
         line-height: 27px;
+    }
+    .footer__bg {
+        height: 1263px;
     }
 }
