@@ -274,19 +274,15 @@
     .subscribe__field input {
         padding: 25px 60px 23px 60px;
     }
-    .subscribe-btn {
-        max-width: 169px;
-        min-height: 53px;
-    }
     .subscribe {
         padding-top: 45px;
         padding-bottom: 45px;
     }
-    .subscribe-btn {
-        margin-top: 16px;
-    }
-    .subscribe-btn {
+    .subscribe__btn {
         margin-left: -175px;
+        margin-top: 16px;
+        max-width: 169px;
+        min-height: 53px;
     }
 }
 
@@ -334,7 +330,7 @@
             font-size: 14px;
         }
     }
-    .subscribe-btn {
+    .subscribe__btn {
         margin-top: 9px;
     }
     .subscribe__text {
@@ -342,16 +338,18 @@
         font-size: 15px;
         line-height: 22px;
     }
-    .create__btn .create__btn-text {
+    .subscribe__btn .subscribe__btn-text {
         padding: 10px 5px;
     }
-    .subscribe-btn {
+    .subscribe__btn {
         max-width: 90px;
         margin-left: -100px;
         padding-right: 0;
     }
-    .create__btn .create__btn-details,
-    .create__btn-details-arrow::before {
+    .subscribe__btn .subscribe__btn-details {
+        display: none;
+    }
+    .subscribe__btn-details-arrow::before {
         display: none;
     }
 }
